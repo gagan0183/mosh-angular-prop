@@ -1,13 +1,12 @@
-interface Point {
+class Point {
     x: number;
-    y: number
-}
+    y: number;
 
-let drawPoint = (point: Point) => {
-    console.log(point.x);
-}
+    draw() {
 
-drawPoint({
-    x: 1,
-    y: 1
-});
+    }
+
+    getDistance() {
+
+    }
+}
