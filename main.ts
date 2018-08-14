@@ -1,9 +1,4 @@
-let a: number;
-let b: boolean;
-let c: string;
-let d: any;
-let e: number[] = [1, 2, 3];
-let f: any[] = [1, true, 'p'];
-
-enum Color { Red = 0, Green = 1, Blue = 2};
-console.log(Color.Red);
+let message;
+message = 'ppppppppp';
+let endsWithP = (<string>message).endsWith('p');
+let alternate = (message as string).endsWith('p');
