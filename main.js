@@ -1,5 +1,7 @@
-function log(message) {
-    console.log(message);
+function something() {
+    for (var i = 0; i < 9; i++) {
+        console.log(i);
+    }
+    console.log('After the loop ', i);
 }
-var message = "This is a message";
-log(message);
+something();
