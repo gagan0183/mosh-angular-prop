@@ -1,8 +1,9 @@
-function something() {
-    for(let i = 0; i < 9; i++) {
-        console.log(i);
-    }
-    console.log('After the loop ', i);
-}
+let a: number;
+let b: boolean;
+let c: string;
+let d: any;
+let e: number[] = [1, 2, 3];
+let f: any[] = [1, true, 'p'];
 
-something();
+enum Color { Red = 0, Green = 1, Blue = 2};
+console.log(Color.Red);
