@@ -1,4 +1,13 @@
-let message;
-message = 'ppppppppp';
-let endsWithP = (<string>message).endsWith('p');
-let alternate = (message as string).endsWith('p');
+interface Point {
+    x: number;
+    y: number
+}
+
+let drawPoint = (point: Point) => {
+    console.log(point.x);
+}
+
+drawPoint({
+    x: 1,
+    y: 1
+});
