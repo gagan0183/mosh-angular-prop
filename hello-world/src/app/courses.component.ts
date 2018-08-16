@@ -8,7 +8,9 @@ import { CoursesService } from "./course/courses.service";
         <ul>
             <li *ngFor="let course of courses">{{ course }}</li>
         </ul>
-        <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'green'">Save</button>
+        <p (click)="ppp()">
+            <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'green'" (click)="onSave($event)">Save</button>
+        </p>
         ` 
 })
 export class CoursesComponent {
@@ -18,5 +20,14 @@ export class CoursesComponent {
 
     constructor(coursesService: CoursesService) {
         this.courses = coursesService.getCourses();
+    }
+
+    onSave($event) {
+        $event.stopPropagation();
+        console.log("button is clicked there", $event);
+    }
+
+    ppp() {
+        console.log('paragrap');
     }
 }
