@@ -8,6 +8,7 @@ import { CoursesService } from "./course/courses.service";
         <ul>
             <li *ngFor="let course of courses">{{ course }}</li>
         </ul>
+        <button class="btn btn-primary">Save</button>
         ` 
 })
 export class CoursesComponent {
