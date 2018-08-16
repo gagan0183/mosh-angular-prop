@@ -11,6 +11,7 @@ import { CoursesService } from "./course/courses.service";
         <p (click)="ppp()">
             <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'green'" (click)="onSave($event)">Save</button>
         </p>
+            <input (keyup.enter)="p()"/>
         ` 
 })
 export class CoursesComponent {
@@ -29,5 +30,9 @@ export class CoursesComponent {
 
     ppp() {
         console.log('paragrap');
+    }
+
+    p() {
+        console.log('enter was pressed there');
     }
 }
