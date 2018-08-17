@@ -12,7 +12,7 @@ import { CoursesService } from "./course/courses.service";
             <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'green'" (click)="onSave($event)">Save</button>
         </p>
             <input [(ngModel)]="email" (keyup.enter)="p()"/>
-            <p>ppppp | summary:9</p>
+            <p>{{ ppppp | summary:9 }}</p>
         ` 
 })
 export class CoursesComponent {
