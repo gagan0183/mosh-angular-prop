@@ -11,13 +11,16 @@ import { CoursesService } from "./course/courses.service";
         <p (click)="ppp()">
             <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'green'" (click)="onSave($event)">Save</button>
         </p>
-            <input #ppppppppp (keyup.enter)="p(ppppppppp.value)"/>
+            <input [(ngModel)]="email" (keyup.enter)="p()"/>
+            <p>ppppp | summary:9</p>
         ` 
 })
 export class CoursesComponent {
     title = "List of courses";
     courses;
     isActive = false;
+    email = '';
+    ppppp = 'This is sample text for a pipe';
 
     constructor(coursesService: CoursesService) {
         this.courses = coursesService.getCourses();
@@ -32,8 +35,7 @@ export class CoursesComponent {
         console.log('paragrap');
     }
 
-    p(ppppppppp) {
-        console.log('enter was pressed there');
-        console.log(ppppppppp);
+    p() {
+        console.log(this.email);
     }
 }
