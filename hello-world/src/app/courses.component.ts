@@ -14,6 +14,8 @@ import { CoursesService } from "./course/courses.service";
             <input [(ngModel)]="email" (keyup.enter)="p()"/>
             <p>{{ ppppp | summary:9 }}</p>
             <star></star>
+            <br />
+            <title-case></title-case>
         ` 
 })
 export class CoursesComponent {
