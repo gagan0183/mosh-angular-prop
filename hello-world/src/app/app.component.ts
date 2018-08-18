@@ -11,7 +11,7 @@ export class AppComponent {
     isFavorite: true
   };
 
-  toggle() {
-    this.post.isFavorite = !this.post.isFavorite;    
+  onFavoriteChanged(p) {
+    console.log('in onFavoriteChanged', p);
   }
 }
