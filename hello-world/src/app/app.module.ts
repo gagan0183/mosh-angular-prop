@@ -13,6 +13,7 @@ import { StarComponent } from './star/star.component';
 import { TitleCaseComponent } from './title-case/title-case.component';
 import { TitlePipe } from './pipe/title.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
     StarComponent,
     TitleCaseComponent,
     TitlePipe,
-    FavoriteComponent
+    FavoriteComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
