@@ -11,6 +11,13 @@ export class AppComponent {
     isLiked: false,
     likesCount: 0
   };
-  courses= [9, 9];
+  courses= [
+    {
+      name: 'course1'
+    },
+    {
+      name: 'course9'
+    }
+  ];
   viewMode = 'map';
 }
