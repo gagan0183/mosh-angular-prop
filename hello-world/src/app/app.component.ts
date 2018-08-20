@@ -11,13 +11,28 @@ export class AppComponent {
     isLiked: false,
     likesCount: 0
   };
-  courses= [
-    {
-      name: 'course1'
-    },
-    {
-      name: 'course9'
-    }
-  ];
+  courses = [];
   viewMode = 'map';
+
+  loadcourses() {
+    this.courses = [
+      {
+        name: 'course1'
+      },
+      {
+        name: 'course9'
+      }
+    ];
+  }
+
+  add() {
+    this.courses.push({
+      name: 'course99'
+    });
+  }
+
+  remove(course) {
+    let index = this.courses.indexOf(course);
+    this.courses.splice(index, 1);
+  }
 }

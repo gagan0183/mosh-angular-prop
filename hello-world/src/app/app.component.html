@@ -9,6 +9,14 @@
     <div *ngSwitchDefault>otherwise</div>
 </div>
 
+<button (click)="loadcourses()">load courses</button>
+<button (click)="add()">Add course</button>
 <ul>
-    <li *ngFor="let course of courses; even as isEven">{{course.name}}<span *ngIf="isEven">(EVEN)</span></li>
+    <li *ngFor="let course of courses; even as isEven" (click)="remove(course)">{{course.name}}<span *ngIf="isEven">(EVEN)</span></li>
 </ul>
+
+<div *ngIf="courses.length > 0">
+    list
+</div>
+
+<favorite></favorite>
