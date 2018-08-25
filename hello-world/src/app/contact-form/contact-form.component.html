@@ -1,7 +1,7 @@
 <form>
   <div class="form-group">
     <label for="firstName">First Name</label>
-    <input type="text" id="firstName" class="form-control">
+    <input ngModel name="firstName" #firstName="ngModel" (change)="p(firstName)" type="text" id="firstName" class="form-control">
   </div>
   <div class="form-group">
     <label for="comment">Comment</label>
