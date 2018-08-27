@@ -12,6 +12,11 @@ export class ContactFormComponent implements OnInit {
     { id: 0, name :'Email'}
   ];
 
+  pp = [
+    { id: 1, name: 'Phone'},
+    { id: 0, name :'Email'}
+  ];
+
   constructor() { }
 
   ngOnInit() {
