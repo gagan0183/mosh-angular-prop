@@ -1,6 +1,6 @@
 <form #f="ngForm" (ngSubmit)="submit(f)">
   <div ngModelGroup="contact" #contact="ngModelGroup">
-    <div *ngIf="contact.valid">...</div>
+    <div *ngIf="!contact.valid">...</div>
     <div class="form-group">
       <label for="firstName">First Name</label>
       <input ngModel required minlength="9" name="firstName" #firstName="ngModel" (change)="p(firstName)" type="text" id="firstName" class="form-control">
@@ -14,5 +14,13 @@
     <label for="comment">Comment</label>
     <textarea name="comment" ngModel id="comment" #comment cols="30" rows="10" class="form-control"></textarea> 
   </div>
-  <button class="btn btn-primary">Submit</button>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ngModel name="isSubscribe">
+    </label>
+  </div>
+  <p>
+    {{ f.value | json }}
+  </p>
+  <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
 </form>
