@@ -19,6 +19,13 @@
       <input type="checkbox" ngModel name="isSubscribe">
     </label>
   </div>
+  <div class="form-group">
+    <label for="contactMethod">Contact Method</label>
+    <select ngModel name="contactMethod" id="contactMethod">
+      <option value=""></option>
+      <option *ngFor="let method of contactMethods" [value]="method.id">{{ method.name }}</option>
+    </select>
+  </div>
   <p>
     {{ f.value | json }}
   </p>
