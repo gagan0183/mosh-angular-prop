@@ -1,10 +1,13 @@
 <form #f="ngForm" (ngSubmit)="submit(f)">
-  <div class="form-group">
-    <label for="firstName">First Name</label>
-    <input ngModel required minlength="9" name="firstName" #firstName="ngModel" (change)="p(firstName)" type="text" id="firstName" class="form-control">
-    <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
-      <div *ngIf="firstName.errors.required">First Name is required</div>
-      <div *ngIf="firstName.errors.minlength">First name must be minimum {{ firstName.errors.minlength.requiredLength }}</div>
+  <div ngModelGroup="contact" #contact="ngModelGroup">
+    <div *ngIf="contact.valid">...</div>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input ngModel required minlength="9" name="firstName" #firstName="ngModel" (change)="p(firstName)" type="text" id="firstName" class="form-control">
+      <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+        <div *ngIf="firstName.errors.required">First Name is required</div>
+        <div *ngIf="firstName.errors.minlength">First name must be minimum {{ firstName.errors.minlength.requiredLength }}</div>
+      </div>
     </div>
   </div>
   <div class="form-group">
