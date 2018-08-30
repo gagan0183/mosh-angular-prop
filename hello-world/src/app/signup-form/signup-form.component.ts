@@ -8,7 +8,10 @@ import { FormGroup, FormControl, Validators } from '../../../node_modules/@angul
 })
 export class SignupFormComponent {
   form = new FormGroup({
-    'username': new FormControl('', Validators.required),
+    'username': new FormControl('', [
+      Validators.required,
+      Validators.minLength(9)
+    ]),
     'password': new FormControl('', Validators.required)
   });
 
