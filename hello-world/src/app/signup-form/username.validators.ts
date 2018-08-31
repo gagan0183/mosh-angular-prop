@@ -9,4 +9,15 @@ export class UsernameValidators {
         }
         return null;
     }
+
+    static shouldBeunique(control: AbstractControl) : ValidationErrors | null {
+        setTimeout(() => {
+            if(control.value === 'gagan')
+                return  {
+                    shouldBeunique: true
+                }
+            return null;
+        });
+        return null;
+    }
 }
