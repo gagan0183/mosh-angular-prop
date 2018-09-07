@@ -11,8 +11,10 @@ export class SignupFormComponent {
   form = new FormGroup({
     'username': new FormControl('', [
       Validators.required,
-      Validators.minLength(9),
       UsernameValidators.cannotContainSpace
+    ],
+    [
+      UsernameValidators.shouldBeunique
     ]),
     'password': new FormControl('', Validators.required)
   });

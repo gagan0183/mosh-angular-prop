@@ -10,14 +10,15 @@ export class UsernameValidators {
         return null;
     }
 
-    static shouldBeunique(control: AbstractControl) : ValidationErrors | null {
-        setTimeout(() => {
-            if(control.value === 'gagan')
-                return  {
-                    shouldBeunique: true
-                }
-            return null;
+    static shouldBeunique(control: AbstractControl) : Promise<ValidationErrors> | null {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log(control.value);
+                if(control.value == 'gagan')
+                    resolve({ shouldBeunique: true });
+                else 
+                    resolve(null);
+            }, 2000);    
         });
-        return null;
     }
 }
