@@ -6,6 +6,7 @@
             id="username" 
             type="text" 
             class="form-control">
+        <div *ngIf="username.pending">checking for uniqueness</div>
         <div class="alert alert-danger" *ngIf="username.touched && username.invalid">
             <div *ngIf="username.errors.required">Username is required.</div>
             <div *ngIf="username.errors.cannotContainSpace">Username cannot contain space</div>
